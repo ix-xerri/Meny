@@ -4,9 +4,6 @@ var app = express();
 
 
 app.use(express.static('public'));
-app.use(function(err, req, res, next){
-  res.send(500, 'Something broke!');
-});
 
 
 app.listen(process.env.PORT || 3000);
