@@ -1,15 +1,16 @@
 define([
-  'jquery',
-  'underscore',
-  'backbone',
-  'meny',
-  'views/menu',
-  'views/index'
-], function ($, _, Backbone, Meny, MenuView, IndexView) {
+	'jquery',
+	'underscore',
+	'backbone',
+	'meny',
+	'views/menu',
+	'views/index',
+	'views/twitter'
+], function ($, _, Backbone, Meny, MenuView, IndexView, TwitterView) {
   	var AppRouter = Backbone.Router.extend({
     	routes: {
     		'' : 'index',
-    		'helloworld': 'helloWorld',
+    		'football': 'football',
       		'*error' : 'notFound'
     	},
     	
@@ -31,8 +32,8 @@ define([
     		$('.contents').html(new IndexView().render().el);
     	},
     	
-    	helloWorld: function(){
-    		alert("helloWorld");
+    	football: function(){
+    		$('.contents').html(new TwitterView().render().el);
     	},
     	
     	notFound: function(){

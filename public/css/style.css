@@ -168,3 +168,13 @@ h1, h2 {
 	position: absolute;
 	bottom: 20px;
 }
+
+.tweets{
+	margin-top: 50px;
+}
+
+.tweets li{
+	list-style-type: none;
+	font-weight: 200;
+	padding: 30px;
+}
