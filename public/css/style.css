@@ -178,3 +178,10 @@ h1, h2 {
 	font-weight: 200;
 	padding: 30px;
 }
+
+@media screen and (max-device-width: 320px) and (orientation:portrait) {
+    body { background-color:red; }
+}
+@media screen and (max-device-width: 320px) and (orientation:landscape) {
+    body { background-color:yellow; }
+}
