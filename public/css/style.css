@@ -129,6 +129,16 @@ h1, h2 {
 	        transition: opacity 0.2s ease;
 }
 
+.clearfix:before,
+.clearfix:after {
+  content: ".";    
+  display: block;    
+  height: 0;    
+  overflow: hidden;	
+}
+.clearfix:after {clear: both;}
+.clearfix {zoom: 1;} /* IE < 8 */
+
 /* Main contents area */
 .contents {
 	background: #eee;
@@ -168,7 +178,22 @@ h1, h2 {
 .tweets li{
 	list-style-type: none;
 	font-weight: 200;
-	padding-bottom: 10px;
+	font-size: 13px;
+	margin-bottom: 20px;
+}
+
+.tweets img{
+	float: left;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin-top: 2px;
+}
+
+.tweets span{
+	float: left;
+	width: 170px;
+	margin-left: 10px;
 }
 
 @media screen and (max-device-width: 320px) and (orientation:portrait) {

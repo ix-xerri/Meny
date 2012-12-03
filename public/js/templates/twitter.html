@@ -1,6 +1,6 @@
 <h1><%= title %></h1>
 <ul class="tweets">
 <% _.each(tweets, function (tweet) { %>
-	<li><%= tweet.get('text') %></li> 
-<% }); %>
+	<li class="clearfix"><a href="http://www.twitter.com/<%= tweet.get('from_user') %>"><img src="<%= tweet.get('profile_image_url') %>" /></a><span><%= tweet.get('text') %></li> 
+<% }); %></span>
 </ul>

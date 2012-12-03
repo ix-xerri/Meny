@@ -22,7 +22,7 @@ define([
 	    	var that = this;
 	    	var title = this.displayTitle();
 	      	
-	      	this.twitterCollection.fetch({ 
+	      	this.twitterCollection.fetch({
 	        	success: function (tweets) {
 	          		$(that.el).append(that.template({title: title, tweets: tweets.models, _:_}));
 	        	}
