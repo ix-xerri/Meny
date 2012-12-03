@@ -31,19 +31,19 @@ define([
     	},
     	
     	index: function(){
-    		$('.page').html(new IndexView().render().el);
+    		$('.contents').html(new IndexView().render().el);
     	},
     	
     	football: function(){
-    		$('.page').html(new TwitterView({query: "football"}).render().el);
+    		$('.contents').html(new TwitterView({query: "football"}).render().el);
     	},
     	
     	basketball: function(){
-    		$('.page').html(new TwitterView({query: "basketball"}).render().el);
+    		$('.contents').html(new TwitterView({query: "basketball"}).render().el);
     	},
     	
     	rugby: function(){
-    		$('.page').html(new TwitterView({query: "rugby"}).render().el);
+    		$('.contents').html(new TwitterView({query: "rugby"}).render().el);
     	},
     	
     	notFound: function(){

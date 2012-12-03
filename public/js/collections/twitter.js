@@ -14,7 +14,7 @@ define([
     	parse: function(resp, xhr) {
     		var count = resp.results.length;
     		for (var i = 0; i < count; i++) {
-    			resp.results[i].text = twitterIfy.clean(resp.results[i].text);
+    			resp.results[i].cleanText = twitterIfy.clean(resp.results[i].text);
     		}
       		return resp.results;
 		},
