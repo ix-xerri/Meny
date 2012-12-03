@@ -11,6 +11,8 @@ define([
     	routes: {
     		'' : 'index',
     		'football': 'football',
+    		'basketball': 'basketball',
+    		'rugby': 'rugby',
       		'*error' : 'notFound'
     	},
     	
@@ -29,11 +31,19 @@ define([
     	},
     	
     	index: function(){
-    		$('.contents').html(new IndexView().render().el);
+    		$('.page').html(new IndexView().render().el);
     	},
     	
     	football: function(){
-    		$('.contents').html(new TwitterView().render().el);
+    		$('.page').html(new TwitterView({query: "football"}).render().el);
+    	},
+    	
+    	basketball: function(){
+    		$('.page').html(new TwitterView({query: "basketball"}).render().el);
+    	},
+    	
+    	rugby: function(){
+    		$('.page').html(new TwitterView({query: "rugby"}).render().el);
     	},
     	
     	notFound: function(){

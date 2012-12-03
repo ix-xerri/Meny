@@ -6,10 +6,11 @@ define([
   	'text!templates/twitter.html'
 ], function($, _, Backbone, TwitterCollection, TwitterTemplate){
 	var TwitterView = Backbone.View.extend({
+		template: _.template(TwitterTemplate),
     	initialize: function () {
       		this.isLoading = false;
       		this.twitterCollection = new TwitterCollection();
-      		this.twitterCollection.query = 'football';
+      		this.twitterCollection.query = this.options.query || 'sports';
     	},
     
 		render: function () {
@@ -19,12 +20,18 @@ define([
 	    
 	    loadResults: function () {
 	    	var that = this;
+	    	var title = this.displayTitle();
 	      	
 	      	this.twitterCollection.fetch({ 
 	        	success: function (tweets) {
-	          		$(that.el).append(_.template(TwitterTemplate, {tweets: tweets.models, _:_}));
+	          		$(that.el).append(that.template({title: title, tweets: tweets.models, _:_}));
 	        	}
 	     	});      
+	    },
+	    
+	    displayTitle: function(){
+	    	var title = this.options.query
+	    	return title.charAt(0).toUpperCase() + title.slice(1);
 	    }
 	});
   	

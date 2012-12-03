@@ -72,10 +72,10 @@ h1, h2 {
 	padding: 3px 10px;
 }
 
-.meny ul li:before {
-	content: '-';
-	margin-right: 5px;
-	color: rgba( 255, 255, 255, 0.2 );
+.meny ul li#home{
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px dashed #c1c1c1;
 }
 
 /* Hint graphic that appears while menu is inactive */
@@ -143,10 +143,6 @@ h1, h2 {
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
 }
-	
-.contents>article {
-	max-width: 400px;
-}
 
 .contents p {
 	margin: 10px 0 10px 0;
@@ -164,26 +160,19 @@ h1, h2 {
 	-webkit-text-size-adjust: none;
 }
 
-.contents .sharing {
-	position: absolute;
-	bottom: 20px;
-}
-
 .tweets{
-	margin-top: 50px;
+	margin-top: 10px;
+	width: 260px;
 }
 
 .tweets li{
 	list-style-type: none;
 	font-weight: 200;
-	padding: 30px;
+	padding-bottom: 10px;
 }
 
 @media screen and (max-device-width: 320px) and (orientation:portrait) {
     .contents { 
-    	max-width: 300px; 
+    	width: 320px; 
     }
-}
-@media screen and (max-device-width: 320px) and (orientation:landscape) {
-    body { background-color:yellow; }
 }
