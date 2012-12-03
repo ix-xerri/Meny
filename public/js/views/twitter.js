@@ -12,6 +12,10 @@ define([
       		this.twitterCollection = new TwitterCollection();
       		this.twitterCollection.query = this.options.query || 'sports';
     	},
+    	
+    	events: {
+    		'click li': 'onTweetClick'
+    	},
     
 		render: function () {
 	    	this.loadResults();
@@ -27,6 +31,10 @@ define([
 	          		$(that.el).append(that.template({title: title, tweets: tweets.models, _:_}));
 	        	}
 	     	});      
+	    },
+	    
+	    onTweetClick: function(){
+	    	//alert('click');
 	    },
 	    
 	    displayTitle: function(){

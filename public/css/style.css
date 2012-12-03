@@ -160,6 +160,13 @@ h1, h2 {
 	line-height: 1.32;
 }
 
+.contents p.fine{
+	border-bottom: 1px dashed #ccc;
+	color: #ccc;
+	font-size: 12px;
+	margin-top: 0;
+}
+
 .contents small {
 	display: block;
 	margin-top: 10px;
@@ -180,6 +187,7 @@ h1, h2 {
 	font-weight: 200;
 	font-size: 13px;
 	margin-bottom: 20px;
+	cursor: pointer;
 }
 
 .tweets img{
@@ -199,5 +207,9 @@ h1, h2 {
 @media screen and (max-device-width: 320px) and (orientation:portrait) {
     .contents { 
     	width: 320px; 
+    }
+    
+    .contents .fine.more {
+   		display: none;
     }
 }
