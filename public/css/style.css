@@ -180,7 +180,9 @@ h1, h2 {
 }
 
 @media screen and (max-device-width: 320px) and (orientation:portrait) {
-    body { background-color:red; }
+    .contents { 
+    	max-width: 300px; 
+    }
 }
 @media screen and (max-device-width: 320px) and (orientation:landscape) {
     body { background-color:yellow; }
