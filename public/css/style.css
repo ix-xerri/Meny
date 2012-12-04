@@ -190,11 +190,14 @@ h1, h2 {
 	cursor: pointer;
 }
 
-.tweets img{
-	float: left;
+.tweets img, .json{
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
+}
+
+.tweets img{
+	float: left;
 	margin-top: 2px;
 }
 
@@ -204,6 +207,16 @@ h1, h2 {
 	margin-left: 10px;
 }
 
+.json{
+	position: absolute;
+	top: 80px;
+	left: 340px;
+	font-size: 10px;
+	background-color: white;
+	box-shadow: 0px 0px 8px #666;
+	padding: 10px;
+}
+
 @media screen and (max-device-width: 320px) and (orientation:portrait) {
     .contents { 
     	width: 320px; 
@@ -211,5 +224,9 @@ h1, h2 {
     
     .contents .fine.more {
    		display: none;
+    }
+    
+    .json{
+    	display: none;
     }
 }

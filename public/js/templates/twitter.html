@@ -1,12 +1,5 @@
 <p class="fine more">Click/tap on a tweet to view JSON.</p>
 <h1><%= title %></h1>
 <ul class="tweets">
-<% _.each(tweets, function (tweet) { %>
-	<li class="clearfix">
-		<a href="http://www.twitter.com/<%= tweet.get('from_user') %>">
-			<img src="<%= tweet.get('profile_image_url') %>" />
-		</a>
-		<span><%= tweet.get('cleanText') %></span>
-	</li> 
-<% }); %>
 </ul>
+<pre><code style="display: none;" class="json"></code></pre>
